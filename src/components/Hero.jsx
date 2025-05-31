@@ -1,16 +1,19 @@
 import 'boxicons/css/boxicons.min.css'
+import Spline from '@splinetool/react-spline'
 
 const Hero = () => {
   return (
     <main className='flex lg:mt-20 flex-col lg:flex-row
     items-center justify-between min-h-[calc(90vh-6rem)]'>
        {/* left side container */}
-        <div className='max-w-xl ml-[5%] z-10 mt[90%]
-        md:mt-[60%] lg:mt-0'>
+        <div data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine" className='max-w-xl ml-[5%] z-10 mt[90%]
+            md:mt-[60%] lg:mt-0'>
             {/* Tag box width gradient border for left  */}
             <div className='relative w-[95%] sm:w-48
             h-10 bg-gradient-to-r from-[#656565] to-[#e99b63]
-            shadow-[0_-_15px_rgba(255,255,255,0.4)] rounded-full'>
+            shadow-[0_0_15px_rgba(255,255,255,0.4)] rounded-full'>
                 <div className='absolute inset-[3px] bg-black
                 rounded-full flex items-center justify-center
                 gap-1'>
@@ -28,7 +31,7 @@ const Hero = () => {
             {/* Short description about the website
              */}
              <p className='text-base sm:text-lg tracking-wider text-grey-400
-             max-2-[25rem] lg:max-w-[30rem]'>
+             max-w-[25rem] lg:max-w-[30rem]'>
                 This is a simple text to demonstrate additonal information to be displayed
              </p>
             {/* Button to sign up */}
@@ -48,8 +51,17 @@ const Hero = () => {
                     GetStarted <i class='bx bx-link-external'></i>
                 </a>
             </div>
-        
         </div>
+        {/* right side container -3D robort*/}
+         <Spline data-aos="fade-zoom-in"
+                data-aos-easing="ease-in-back"
+                 data-aos-delay="300"
+                data-aos-offset="0"
+                data-aos-duration="3000" className='absolute lg:top-0 top-[-20%] lg:right-0 sm:right-[10%] right-[-5%] lg:w-[50%] sm:w-[60%] w-[90%] lg:h-[90vh] sm:h-[80vh] h-[70vh] z-0
+         bottom-0 lg:left-[25%] sm:lfet-[2%] h-full'  scene="https://prod.spline.design/HMCnBjsoSNpdbtmU/scene.splinecode" />
+ 
+
+
     </main>
   )
 }
